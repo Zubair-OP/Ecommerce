@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return (
-        <div className="relative bg-gray-50 overflow-hidden">
-            <div className="max-w-7xl mx-auto">
-                <div className="relative z-10 pb-8 bg-gray-50 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 pt-10 px-4 sm:px-6 lg:px-8">
-                    <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+        <div className="bg-gray-50 overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+                    {/* Text Content */}
+                    <div className="py-12 sm:py-16 md:py-20 lg:py-28 xl:py-32">
                         <div className="sm:text-center lg:text-left">
                             <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                                 <span className="block xl:inline">Premium products</span>{' '}
@@ -34,15 +35,17 @@ const Hero = () => {
                                 </div>
                             </div>
                         </div>
-                    </main>
+                    </div>
+
+                    {/* Hero Image */}
+                    <div className="mt-8 lg:mt-0">
+                        <img
+                            className="w-full h-56 object-cover rounded-lg sm:h-72 md:h-96 lg:h-full"
+                            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1600"
+                            alt="Shopping experience"
+                        />
+                    </div>
                 </div>
-            </div>
-            <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                <img
-                    className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-                    src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1600"
-                    alt="Shopping experience"
-                />
             </div>
         </div>
     );
